@@ -1,0 +1,18 @@
+
+
+.container{
+    margin:30px 30px 30px 30px;
+    background-color:azure;
+    position: relative;
+    text-align: left;
+}
+
+.reg-validation{
+    width: 900px;
+    margin: auto;
+}
+
+.submit-btn{
+    text-align: right;
+}
+
