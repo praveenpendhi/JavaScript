@@ -4,13 +4,15 @@ function validate(){
     let firstNameInput = document.getElementById('valfirstName').value
     let lastNameInput = document.getElementById('vallastName').value
     let emailInput = document.getElementById('valuserName').value
-    let cityInput = document.getElementById('valcity').value
-    let stateInput = document.getElementById('valstate').value
-    let zipInput = document.getElementById('valzip').value
+    let phoneInput = document.getElementById('valPhone').value
+    let batchInput = document.getElementById('valbatch').value
+    let moduleInput = document.getElementById('valmodule').value
+    
     let tncInput = document.getElementById('valtnc').checked
+
     let error = false;
     var onlyalphabet = /^[A-Za-z]+$/;
-    if(firstNameInput.match(onlyalphabet)) {
+    if(firstNameInput.match(onlyalphabet) && firstNameInput.length >= 3) {
         document.getElementById('firstname-valid').style.display = 'block'
         document.getElementById('firstname-invalid').style.display = 'none'
     } else {
@@ -19,7 +21,7 @@ function validate(){
         error = true;
     }
 
-    if(lastNameInput.match(onlyalphabet)) {
+    if(lastNameInput.match(onlyalphabet) && lastNameInput.length >= 3) {
         document.getElementById('lastname-valid').style.display = 'block'
         document.getElementById('lastname-invalid').style.display = 'none'
     } else {
@@ -38,34 +40,35 @@ function validate(){
         error = true;
       }
 
-    if(cityInput.match(onlyalphabet) && cityInput.length >= 3) {
-        document.getElementById('city-valid').style.display = 'block'
-        document.getElementById('city-invalid').style.display = 'none'
+      var phonenumformat =  /^[0-9]+$/;
+      if(phoneInput.match(phonenumformat) && phoneInput.length == 10){
+          document.getElementById('Phone-valid').style.display = 'block'
+          document.getElementById('Phone-invalid').style.display = 'none'
+      } else {
+          document.getElementById('Phone-valid').style.display = 'none'
+          document.getElementById('Phone-invalid').style.display = 'block'
+          error = true;
+      }
+  
+
+    if(batchInput.length >= 1 && batchInput != "none") {
+        document.getElementById('batch-valid').style.display = 'block'
+        document.getElementById('batch-invalid').style.display = 'none'
     } else {
-        document.getElementById('city-valid').style.display = 'none'
-        document.getElementById('city-invalid').style.display = 'block'
+        document.getElementById('batch-valid').style.display = 'none'
+        document.getElementById('batch-invalid').style.display = 'block'
         error = true;
     }
 
-    if(stateInput.length >= 1 && stateInput != "none") {
-        document.getElementById('state-valid').style.display = 'block'
-        document.getElementById('state-invalid').style.display = 'none'
+    if(moduleInput.length >= 1 && moduleInput != "none") {
+        document.getElementById('module-valid').style.display = 'block'
+        document.getElementById('module-invalid').style.display = 'none'
     } else {
-        document.getElementById('state-valid').style.display = 'none'
-        document.getElementById('state-invalid').style.display = 'block'
+        document.getElementById('module-valid').style.display = 'none'
+        document.getElementById('module-invalid').style.display = 'block'
         error = true;
     }
-
-    var zipformat =  /^[0-9]+$/;
-    if(zipInput.match(zipformat) && zipInput.length == 6){
-        document.getElementById('zip-valid').style.display = 'block'
-        document.getElementById('zip-invalid').style.display = 'none'
-    } else {
-        document.getElementById('zip-valid').style.display = 'none'
-        document.getElementById('zip-invalid').style.display = 'block'
-        error = true;
-    }
-
+    
     if(tncInput) {
         document.getElementById('tnc-valid').style.display = 'block'
         document.getElementById('tnc-invalid').style.display = 'none'
@@ -77,22 +80,22 @@ function validate(){
 
     if(error != true)
     {
-        alert('You have succesfully registered')
+        alert('Your details have been saved succesfully!')
 
         document.getElementById('valfirstName').value = ''
         document.getElementById('vallastName').value = ''
         document.getElementById('valuserName').value = ''
-        document.getElementById('valcity').value = ''
-        document.getElementById('valstate').value = 'none'
-        document.getElementById('valzip').value = ''
+        document.getElementById('valPhone').value = ''
+        document.getElementById('valbatch').value = 'none'
+        document.getElementById('valmodule').value = ''
         document.getElementById('valtnc').checked = false
 
         document.getElementById('firstname-valid').style.display = 'none'
         document.getElementById('lastname-valid').style.display = 'none'
         document.getElementById('user-valid').style.display = 'none'
-        document.getElementById('city-valid').style.display = 'none'
-        document.getElementById('state-valid').style.display = 'none'
-        document.getElementById('zip-valid').style.display = 'none'
+        document.getElementById('Phone-valid').style.display = 'none'
+        document.getElementById('batch-valid').style.display = 'none'
+        document.getElementById('module-valid').style.display = 'none'
         document.getElementById('tnc-valid').style.display = 'none'
 
     }

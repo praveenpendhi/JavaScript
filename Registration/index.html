@@ -12,12 +12,12 @@
 <body>
     <div class="container">
       <div>
-      <img src="image/logo.png" alt="accio" style="width:10%;">
+      <img src="image/logo.png" alt="accio" style="width:10%;padding: 20px;">
       <div style="text-align:center;" class="display-4">Registration Form</div>
       </div>  
       <br>
     <form class="row g-3 reg-validation">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" id="valfirstName" value="">
           <div class="valid-feedback" id="firstname-valid">
@@ -27,7 +27,7 @@
             Please enter a valid name
           </div>  
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <label for="validationCustom02" class="form-label">Last name</label>
           <input type="text" class="form-control" id="vallastName" value="">
           <div class="valid-feedback" id="lastname-valid">
@@ -37,8 +37,8 @@
             Please enter a valid name
           </div>
         </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="col-md-6">
+          <label for="validationCustomUsername" class="form-label">Email</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">@</span>
             <input type="text" class="form-control" id="valuserName" aria-describedby="inputGroupPrepend">
@@ -51,74 +51,56 @@
           </div>
         </div>
         <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">City</label>
-          <input type="text" class="form-control" id="valcity">
-          <div class="valid-feedback" id="city-valid">
-            Looks good!
+          <label for="validationCustom05" class="form-label">Phone Number</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">+91</span>
+            <input type="text" class="form-control" id="valPhone">
+            <div class="valid-feedback" id="Phone-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="Phone-invalid">
+              Please provide a valid number.
+            </div>
           </div>
-          <div class="invalid-feedback" id="city-invalid">
-            Please provide a valid city.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">State</label>
           
-          <select name="state" id="valstate" class="form-select">
-            <option value="none">Please selct your state....</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chandigarh">Chandigarh</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-            <option value="Daman and Diu">Daman and Diu</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Lakshadweep">Lakshadweep</option>
-            <option value="Puducherry">Puducherry</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Tripura">Tripura</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="West Bengal">West Bengal</option>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Batch No</label>
+          
+          <select name="batch" id="valbatch" class="form-select">
+            <option value="none">Please select batch no...</option>
+            <option value="1">Batch 1</option>
+            <option value="2">Batch 2</option>
+            <option value="3">Batch 3</option>
+            
             </select>
-          <div class="valid-feedback" id="state-valid">
+          <div class="valid-feedback" id="batch-valid">
             Looks good!
           </div>
-          <div class="invalid-feedback" id="state-invalid">
-            Please select a valid state.
+          <div class="invalid-feedback" id="batch-invalid">
+            Please select a valid batch no.
           </div>
         </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="valzip">
-          <div class="valid-feedback" id="zip-valid">
+
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Current Module</label>
+          
+          <select name="batch" id="valmodule" class="form-select">
+            <option value="none">Please select current module...</option>
+            <option value="5">Module 5</option>
+            <option value="6">Module 6</option>
+            <option value="7">Module 7</option>
+            
+            </select>
+          <div class="valid-feedback" id="module-valid">
             Looks good!
           </div>
-          <div class="invalid-feedback" id="zip-invalid">
-            Please provide a valid zip.
+          <div class="invalid-feedback" id="module-invalid">
+            Please select a valid module no.
           </div>
         </div>
+        
         <div class="col-12">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="valtnc">
@@ -137,6 +119,8 @@
           <button class="btn btn-primary" type="button" onclick="validate()">Submit form</button>
         </div>
         <div></div>
+        <div></div>
+        
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

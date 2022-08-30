@@ -1,8 +1,15 @@
 
+body {
+    background-image: url("image/bg.jpg");
+    background-color: #cccccc;
+    background-position: center;
+}
 
 .container{
-    margin:30px 30px 30px 30px;
+    margin: 45px;
     background-color:azure;
+    opacity: 98%;
+    
     position: relative;
     text-align: left;
 }
@@ -12,7 +19,4 @@
     margin: auto;
 }
 
-.submit-btn{
-    text-align: right;
-}
 
